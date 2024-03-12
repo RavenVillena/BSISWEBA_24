@@ -34,7 +34,6 @@ class Model extends Database
 
         $query = trim($query, " && ");
         show($query);
-        //$query = "select * from info";
 
         $data = array_merge($data, $data_not);
         $result = $this->query($query, $data);
@@ -46,18 +45,3 @@ class Model extends Database
         return false;
     }
 }
-
-// public function where($data, $data_not = [])
-//     {
-//         //show($data);
-//         $keys = array_keys($data);
-//         //show($keys);
-//         $query ="select * from info where "; // firstname = :firstname && lastname = :lastname
-//         show($query);
-//         foreach ($keys as $key)
-//         {
-//             $query .= $key . " = :" $key . " && ";
-//         }
-//         //show($query);
-//     }
-// }
