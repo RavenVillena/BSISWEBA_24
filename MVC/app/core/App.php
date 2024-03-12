@@ -10,9 +10,7 @@ class App
     public function  __construct()
     {
         $url = $this->splitURL();
-        //show($url[0]);
-        //show($url);
-
+        
         if(isset($url[0]))
         {
             if(file_exists('../app/controllers/' . ucfirst($url[0]) . '.php'))
@@ -43,11 +41,7 @@ class App
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->params);
 
-        //show($url[0]); //kukunin ung controller - 0 array
-        //show($url); //display/Check laman ng variable/Debug error
-        //echo '<pre>';
-        //print_r($url);
-        //echo '</pre>';
+        
     }
 
     private function splitURL()
@@ -59,10 +53,6 @@ class App
         }
     }
 }
-
-//print_r();
-//print_r(explode("/", trim($_GET['url'], "/")));
-//print_r(explode("/", $_GET['url']));
 
 
 
