@@ -4,6 +4,7 @@ class Home extends Controller
 {
     public function index()
     {
+        $user = new User();
         $model = new Model();
         $arr['Firstname'] = 'Raven';
         $data = $model->where

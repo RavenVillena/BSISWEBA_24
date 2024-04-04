@@ -6,9 +6,4 @@ class _404 extends Controller
     {
         $this->view('404');
     }
-//run bitch!
-    // public function test()
-    // {
-    //     echo 'Ochige!';
-    // }
 }
